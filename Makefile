@@ -21,7 +21,7 @@ run: target/x86_64-unknown-hermit/release/hermit_wasm
 		-smp 8,sockets=1,cores=8,threads=8,maxcpus=64 \
 		-m 1G \
 		-device isa-debug-exit,iobase=0xf4,iosize=0x04 \
-		-kernel rusty-loader-x86_64 \
+		-kernel hermit-loader-x86_64 \
 		-append "-- -r 10.0.2.2 -v" \
 		-initrd target/x86_64-unknown-hermit/release/hermit_wasm \
 		-netdev user,id=u1,hostfwd=tcp::3000-:3000 \
