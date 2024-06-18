@@ -24,5 +24,4 @@ run: target/x86_64-unknown-hermit/release/hermit_wasm
 		-kernel hermit-loader-x86_64 \
 		-append "-- -r 10.0.2.2 -v" \
 		-initrd target/x86_64-unknown-hermit/release/hermit_wasm \
-		-netdev user,id=u1,hostfwd=tcp::3000-:3000 \
-		-device rtl8139,netdev=u1
+		-netdev user,id=u1,hostfwd=tcp::3000-:3000 -device virtio-net-pci,netdev=u1,disable-legacy=on,packed=on,mq=on
