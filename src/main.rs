@@ -1,5 +1,5 @@
 #[cfg(target_os = "hermit")]
-use hermit_sys as _;
+use hermit as _;
 
 mod channel_messages;
 mod cli;
